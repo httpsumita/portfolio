@@ -1,0 +1,156 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<!-- <img class="h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800" src="portfolio0\portfolioapp\mp4\images\ID.jpeg" alt="image description"> -->
+
+<div class="  flex flex-col-reverse md:flex-row  justify-center h-auto  text-white pt-14  mb-10 ">
+    <!-- Left Section -->
+    <div class="md:w-1/2 text-center md:text-left   md:pl-28 pt-14  ">
+      <h1 class="text-4xl md:text-5xl font-bold">Hi there, I Am Sumita</h1>
+      <p class="text-lg md:text-xl">
+        an aspiring Backend Developer,
+        <br>
+         learning and implementing as much as possible
+      </p>
+      <div class="flex justify-center md:justify-start space-x-4 pt-4">
+        <a href="https://github.com/httpsumita" target="_blank" class=" text-blue-400 hover:underline"><span class="bg-blue-100 text-blue-800 text-md  font-semibold me-2 px-4 py-2 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">GitHub</span></a>
+        <a href="https://www.linkedin.com/in/sumita-pathak-91699a215/" target="_blank" class="text-blue-400 hover:underline"><span class="bg-blue-100 text-blue-800 text-md  font-semibold me-2 px-4 py-2 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">LinkedIn</span></a>
+        <a href="https://x.com/sumitApathak1" target="_blank" class="text-blue-400 hover:underline"><span class="bg-blue-100 text-blue-800 text-md  font-semibold me-2 px-4 py-2 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Twitter</span></a>
+        
+        
+
+      </div>
+      <div class="mt-10">
+      <a href="https://drive.google.com/file/d/1K4yVcJpLIWudfQxEMWpZRsp55_sn7sKN/view?usp=sharing" target="_blank" class=" text-blue-400 hover:underline "><span class="bg-blue-100 text-blue-800 text-md  font-semibold me-2 px-4 py-2 rounded dark:bg-blue-900 dark:text-blue-300 ms-3"> View Resume</span></a>
+       </div> 
+    </div>
+  
+    <!-- Right Section -->
+    <div class="md:w-1/2 flex justify-center mb-0 ">
+      <img 
+        src="{% static 'images/ID.png' %}" 
+        alt="Sumita's Picture" 
+        class="rounded-full w-40 h-40 md:w-64 md:h-64 object-cover shadow-lg"
+      />
+    </div>
+  </div>
+
+  <div class=" Achievements flex flex-col gap-4">
+    <!-- Row 1: Five Buttons -->
+    <div class="flex flex-wrap sm:flex-row flex-col justify-center items-center gap-2 md:gap-8 w-full">
+        {% for a in achievements|slice:":5" %}
+        <button class="bg-gradient-to-r from-sky-400 via-sky-800 to-blue-400 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
+            {{ a }}
+        </button>
+        {% endfor %}
+    </div>
+
+    <!-- Row 2: Four Buttons -->
+    <div class="flex flex-wrap sm:flex-row flex-col justify-center items-center gap-2 md:gap-8 w-full sm:w-3/4 mx-auto mt-4">
+        {% for a in achievements|slice:"4:" %}
+        <button class="bg-gradient-to-r from-sky-400 via-sky-800 to-blue-400 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
+            {{ a }}
+        </button>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<div class="TimeLine m-14 md:ml-36">
+  
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+  <li class="mb-10 ms-6 pl-4">            
+      <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+          <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+          </svg>
+      </span>
+      <h3 class="flex items-center mb-1 text-lg font-bold text-white dark:text-white">Website Developer <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></h3>
+      <time class="block mb-2 text-sm font-normal leading-none text-white">Aug-Oct 2024</time>
+      <p class="mb-4 text-base font-normal text-white"><span class="font-semibold">Women in Tech Dreamin' X Salesforce</span> 
+        <br>
+        Blah Blah</p>
+      <a href="https://www.witdreamin.com/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+<!-- <svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+  <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+  <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+</svg>  -->
+View Website </a>
+  </li>
+  
+
+      <li class="mb-10 ms-6 pl-4">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+            </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-bold text-white dark:text-white">Competitive Programming Lead<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Community</span></h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-white">Aug 2024 - Present</time>
+        <p class="mb-4 text-base font-normal text-white"><span class="font-semibold">Google Developer Group, DSCSITSC</span> 
+          <br>
+          Blah Blah</p>
+          </li>
+
+      <li class="mb-10 ms-6 pl-4">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+            </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-bold text-white dark:text-white">Product Manager</h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-white">Aug 2023-Aug 2024</time>
+        <p class="mb-4 text-base font-normal text-white"><span class="font-semibold">FilmFinance.App</span> 
+          <br>
+          Blah Blah</p>
+          </li>
+
+          <li class="mb-10 ms-6 pl-4">            
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+            </span>
+            <h3 class="flex items-center mb-1 text-lg font-bold text-white dark:text-white">Chapter Director<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Community</span></h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-white">April 2023 - Present</time>
+            <p class="mb-4 text-base font-normal text-white"><span class="font-semibold">The Phoenix Guild</span> 
+              <br>
+              Blah Blah</p>
+              </li>
+
+              <li class="mb-10 ms-6 pl-4">            
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                    <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                    </svg>
+                </span>
+                <h3 class="flex items-center mb-1 text-lg font-bold text-white dark:text-white">Technical Writing Intern<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Community</span></h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-white">Mar - May 2023</time>
+                <p class="mb-4 text-base font-normal text-white"><span class="font-semibold">The Phoenix Guild</span> 
+                  <br>
+                  Blah Blah</p>
+                  </li>
+
+          
+    
+ 
+  
+</ol>
+
+
+
+</div>
+  
+
+ 
+  
+  
+
+
+{% endblock content %}
