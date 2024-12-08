@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(zw2z5oc!s_c9rvquskt@qjxj0ggbm$pgb_qo@t3+!@76%$kmi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Security settings (update SECRET_KEY for production)
 DEBUG = True
+ALLOWED_HOSTS = ['*']  # Vercel will handle your domain
 
-ALLOWED_HOSTS = []
+# Add this to support environment variables
 
 
 # Application definition
@@ -48,7 +51,8 @@ COMPRESS_ENABLED = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]  # Ensure static files are properly located
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 

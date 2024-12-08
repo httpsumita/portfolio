@@ -1,0 +1,28 @@
+{
+    "builds": [
+      {
+        "src": "portfolio0/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+                "runtime": "python3.11",
+                "buildCommand": "apt-get update && apt-get install -y libpq-dev && pip install --no-cache-dir -r requirements.txt"
+            }
+        
+      },
+      {
+        "src": "static/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "portfolio0/wsgi.py"
+      }
+    ]
+  }
+  
