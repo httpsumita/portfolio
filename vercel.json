@@ -4,11 +4,10 @@
         "src": "portfolio0/wsgi.py",
         "use": "@vercel/python",
         "config": {
-                "runtime": "python3.11",
-                "buildCommand": "apt-get update && apt-get install -y libpq-dev && pip install --no-cache-dir -r requirements.txt"
+                "runtime": "python3.11"
             }
         
-      },
+      },      
       {
         "src": "static/**/*",
         "use": "@vercel/static"
@@ -24,5 +23,6 @@
         "dest": "portfolio0/wsgi.py"
       }
     ]
+    
   }
   
