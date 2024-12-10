@@ -82,11 +82,6 @@ dist/
 *.tmp
 ~*
 
-# Docker
-docker-compose.override.yml
-.docker/
-docker-compose*.yml
-
 # Local development configurations
 *.local
 .vercel
