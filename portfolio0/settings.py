@@ -51,8 +51,7 @@ COMPRESS_ENABLED = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]  # Ensure static files are properly located
-STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
@@ -64,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.contrib.staticfiles',
     
 ]
 
